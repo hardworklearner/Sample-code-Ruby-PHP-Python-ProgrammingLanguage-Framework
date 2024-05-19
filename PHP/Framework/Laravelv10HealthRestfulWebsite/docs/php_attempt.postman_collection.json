@@ -1,0 +1,2881 @@
+{
+	"info": {
+		"_postman_id": "79bc7143-2207-4dc9-9c5e-460f966eaf9d",
+		"name": "php_attempt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "506444"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test app 1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "example1@php_attempt.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "example1@php_attempt.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "remember_me",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer 1|K1X10sWmmTj7GqSG8DGFQyZLNxYui7rs44lglvsye92d3f69ac"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json, ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Bearer 3|gIEX1OM9OJ6WLd5IQR6NobHNa7h0J9JapyV4I7Jc722172ea",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger 3\",\n            \"email\": \"luella053@example.net\",\n            \"password\": \"12345678\",\n            \"c_password\": \"12345678\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger\",\n            \"email\": \"luella05@example.net\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger\",\n            \"email\": \"luella05@example.net\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Record",
+			"item": [
+				{
+					"name": "User complete achievement at time",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/achievements/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"achievements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User do exercise at time",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"exercise_id\": 4,\n    \"duration\": 60,\n    \"calories_burned\": 100,\n    \"exercise_time\": \"2024-05-19 10:02:22\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/exercises",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User add category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/categories/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"categories",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User remove category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/categories/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"categories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user achievements list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/achievements/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"achievements",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user weights list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/weights/list?date=2024-05-19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"weights",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user bodies list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/bodies/list?start_date=2024-05-13&end_date=2024-05-19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"bodies",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-18",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user exercises list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/exercises/list?start_date=2024-05-13&end_date=2024-05-19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"exercises",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user categories list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/categories/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"categories",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user posts list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/posts/list?start_date=2024-05-13&end_date=2024-05-19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"posts",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-18",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user note list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/diaries/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"diaries",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user note list Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/meals/list?date=2024-05-18",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"meals",
+								"list"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-18"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "food_time",
+									"value": "Breakfast",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger 3\",\n            \"email\": \"luella053@example.net\",\n            \"password\": \"12345678\",\n            \"c_password\": \"12345678\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger\",\n            \"email\": \"luella05@example.net\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger\",\n            \"email\": \"luella05@example.net\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/13",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|sgBdhpntTcIZku9LL3pJVbE5R6foGch1lp5ARpujc256f728"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Achievements",
+			"item": [
+				{
+					"name": "List Achievements",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/achievements",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"achievements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"achievement_name\": \"Alanna Buckridge 3\",\n            \"level\": 1,\n            \"category_id\": 7,\n            \"description\": \"Nemo et minus est dolorem quae voluptatum et. Facilis itaque ea ut ut neque. Quaerat molestiae labore qui a dignissimos nihil nihil.\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/achievements",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"achievements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"achievement_name\": \"Alanna Buckridge\",\n            \"level\": 2,\n            \"category_id\": 6,\n            \"description\": \"1 Nemo et minus est dolorem quae voluptatum et. Facilis itaque ea ut ut neque. Quaerat molestiae labore qui a dignissimos nihil nihil.\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/achievements/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"achievements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"name\": \"Tierra Reinger\",\n            \"email\": \"luella05@example.net\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/achievements/56",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"achievements",
+								"56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 3|K9E9PVgUjcoKtUdbaeV2iNH5fUonI7J8YrL4AXHw925481a4"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/achievements/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"achievements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bodies",
+			"item": [
+				{
+					"name": "List Bodies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|ezcHda6k7x8XVqWQbhx3cJ4ljPrWn9ONmYhC8vj57f53f770"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bodies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bodies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Body Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|ezcHda6k7x8XVqWQbhx3cJ4ljPrWn9ONmYhC8vj57f53f770"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"body_size\": 59.68,\n            \"calculate_time\": \"2024-05-18 10:02:22\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bodies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bodies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Body Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|ezcHda6k7x8XVqWQbhx3cJ4ljPrWn9ONmYhC8vj57f53f770"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"body_size\": 60.68,\n            \"calculate_time\": \"2024-05-18 10:02:22\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bodies/52",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bodies",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Body Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 1|ezcHda6k7x8XVqWQbhx3cJ4ljPrWn9ONmYhC8vj57f53f770"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bodies/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bodies",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 2|4pqTY3y0NaSUhgcZ1CDAnwF19Y87gzk13CyW4JF808f0d859"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/bodies/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"bodies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "List Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"category_name\": \"Test\",\n            \"description\": \"Test\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"category_name\": \"Test\",\n            \"description\": \"Test\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Achievement",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "List Notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/diaries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"diaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"diary_content\": \"Test\",\n            \"diary_time\": \"2024-05-19 16:02:25\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/diaries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"diaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"diary_content\": \"Test\",\n            \"diary_time\": \"2024-05-18 10:02:23\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/diaries/51",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"diaries",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/diaries/51",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"diaries",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/diaries/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"diaries",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exercises",
+			"item": [
+				{
+					"name": "List exercises",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/exercises",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exercise Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "exercise_name",
+									"value": "Connie Lehner 5",
+									"type": "text"
+								},
+								{
+									"key": "calories_burned",
+									"value": "185.24",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "exercise_type",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "exercise_level",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "exercise_description",
+									"value": "Reprehenderit velit quaerat sunt dicta ratione optio. Maiores quia reprehenderit architecto quos ut sunt. A omnis porro corrupti voluptates voluptatem unde. Saepe non quia nam.",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "exercise_image",
+									"type": "file",
+									"src": "/Users/admin/Downloads/asparagus-2169305_1920.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/exercises",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exercise Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "exercise_name",
+									"value": "Connie Lehnernn",
+									"type": "text"
+								},
+								{
+									"key": "calories_burned",
+									"value": "185.24",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "exercise_type",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "exercise_level",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "exercise_description",
+									"value": "Reprehenderit velit quaerat sunt dicta ratione optio. Maiores quia reprehenderit architecto quos ut sunt. A omnis porro corrupti voluptates voluptatem unde. Saepe non quia nam.",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "exercise_image",
+									"type": "file",
+									"src": "/Users/admin/Downloads/bicycle-8088372_1920.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/exercises/54?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"exercises",
+								"54"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exercise Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/exercises/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"exercises",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exercise",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/exercises/60",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"exercises",
+								"60"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "List post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts?date=2024-05-19",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-05-19"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-05-13",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-05-19",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "8",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "a",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"title\": \"Mr. Hailey Lakin\",\n            \"description\": \"Quis et voluptas fugiat ipsa. Debitis a aut ut et qui non. Repellendus velit voluptate ut animi beatae quos provident.\",\n            \"post_content\": \"Vitae error quibusdam et occaecati dolor quia. Modi voluptatem sequi quidem labore nobis quaerat. Neque et iure consectetur rerum. Facilis molestiae autem distinctio officiis atque id.\",\n            \"category_id\": 10\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"title\": \"Mr. Hailey Lakinm\",\n            \"description\": \"Quis et voluptas fugiat ipsa. Debitis a aut ut et qui non. Repellendus velit voluptate ut animi beatae quos provident.\",\n            \"post_content\": \"Vitae error quibusdam et occaecati dolor quia. Modi voluptatem sequi quidem labore nobis quaerat. Neque et iure consectetur rerum. Facilis molestiae autem distinctio officiis atque id.\",\n            \"category_id\": 10\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts/61",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meal",
+			"item": [
+				{
+					"name": "List meals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/meals",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meal Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "meal_name",
+									"value": "Connie Lehnernn",
+									"type": "text"
+								},
+								{
+									"key": "calories_provide",
+									"value": "185.24",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Reprehenderit velit quaerat sunt dicta ratione optio. Maiores quia reprehenderit architecto quos ut sunt. A omnis porro corrupti voluptates voluptatem unde. Saepe non quia nam.",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "meal_time",
+									"value": "2024-05-18 10:02:22",
+									"type": "text"
+								},
+								{
+									"key": "food_time",
+									"value": "Dinner",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/Users/admin/Downloads/hamburger-494706_1920.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/meals",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meal Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "meal_name",
+									"value": "Connie Lehnernn",
+									"type": "text"
+								},
+								{
+									"key": "calories_provide",
+									"value": "185.24",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Reprehenderit velit quaerat sunt dicta ratione optio. Maiores quia reprehenderit architecto quos ut sunt. A omnis porro corrupti voluptates voluptatem unde. Saepe non quia nam.",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "meal_time",
+									"value": "2024-05-18 10:02:22",
+									"type": "text"
+								},
+								{
+									"key": "food_time",
+									"value": "Dinner",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"type": "file",
+									"src": "/Users/admin/Downloads/platter-2009590_1920.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/meals/52?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								"52"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meal Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/meals/52",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Meal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/meals/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"meals",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weight",
+			"item": [
+				{
+					"name": "List weights",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/weights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"weights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weight Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"weight\": 59.68,\n            \"calculate_time\": \"2024-05-18 10:02:22\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/weights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"weights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weight Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\n            \"weight\": 59.68,\n            \"calculate_time\": \"2024-05-18 10:02:22\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/weights/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"weights",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weight Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|aeOG7HpqdOKlm7IGROLTbNzREIHd13sVg55xJBKq0ff3dd5e"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/weights/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"weights",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weight",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, "
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|7Va5HsCmEsfJiv19APJoOKfp490KGsUqlm69xwaOb2f5aa4b"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/weights/50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"weights",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin1@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "remember_me",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

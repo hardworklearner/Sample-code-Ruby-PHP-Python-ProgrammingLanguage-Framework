@@ -1,0 +1,306 @@
+ 2426  cd php_attempt
+ 2427  ls
+ 2428  php artisan migrate 
+ 2429  php artisan make:controller AuthController
+ 2430  php artisan serve
+ 2433  php artisan route:list
+ 2442  php artisan make:model Archivements --migration
+ 2444  composer dump-autoload
+ 2448  php artisan make:seeder AchievementSeeder
+ 2449  php artisan db:seed --class=AchievementSeeder
+ 2450  php artisan make:factory AchievementFactory
+ 2451  php artisan db:seed --class=AchievementSeeder
+ 2453  php artisan make:model Categories --migration
+ 2454  php artisan make:migration create_achievements_table 
+ 2455  php artisan make:migrate
+ 2456  php artisan migrate
+ 2457  php artisan migrate:rollback
+ 2458  php artisan migrate
+ 2459  php artisan make:seeder CategorySeeder
+ 2460  php artisan db:seed --class=CategorySeeder
+ 2461  php artisan make:factory CategoryFactory
+ 2462  php artisan make:factory CategoryFactory --model=Category\n
+ 2463  php artisan db:seed --class=CategorySeeder
+ 2465  php artisan migrate:rollback
+ 2466  php artisan migrate
+ 2467  php artisan db:seed --class=CategorySeeder
+ 2469  php artisan db:seed --class=AchievementSeeder
+ 2470  php artisan make:seeder UserSeeder
+ 2471  php artisan db:seed
+ 2472  php artisan make:migration create_achievenment_category_tables
+ 2473  php artisan make:migration create_category_user_tables
+ 2474  php artisan migrate
+ 2476  php artisan migrate:rollback
+ 2477  php artisan migrate
+ 2478  php artisan db:seed
+ 2479  php artisan migrate:rollback
+ 2480  php artisan migrate
+ 2481  php artisan db:seed
+ 2496  php artisan make:mode Post --migration 
+ 2497  php artisan make:mode Weight --migration 
+ 2498  php artisan make:mode Body --migration 
+ 2499  php artisan make:mode Meal --migration 
+ 2502  php artisan make:mode Exercise --migration 
+ 2503  php artisan make:migration create_user_exercise_tables
+ 2506  php artisan make:model Diary --migration
+ 2509  php artisan db:seed 
+ 2511  php artisan make:migration create_exercise_user_table
+ 2513  php artisan migrate
+ 2515  php artisan make:factory PostFactory --model=Post
+ 2516  php artisan make:seeder PostSeeder
+ 2517  php artisan make:factory WeightFactory --model=Weight
+ 2518  php artisan make:seeder WeightSeeder
+ 2519  php artisan make:factory BodyFactory --model=Body
+ 2520  php artisan make:seeder BodySeeder 
+ 2521  php artisan make:factory MealFactory --model=Meal
+ 2522  php artisan key:generate
+ 2523  php artisan storage:link 
+ 2524  php artisan make:seeder MealSeeder
+ 2525  php artisan make:factory ExerciseFactory --model=Exercise
+ 2526  php artisan make:seeder ExerciseSeeder
+ 2527  php artisan make:factory DiaryFactory --model=Diary
+ 2528  php artisan make:seeder DiarySeeder
+ 2530  php artisan migrate:rollback
+ 2531  php artisan migrate
+ 2532  php artisan migrate:rollback
+ 2533  php artisan migrate
+ 2535  php artisan db:seed
+ 2536  php artisan migrate:rollback
+ 2537  php artisan migrate
+ 2538  php artisan migrate:rollback
+ 2539  php artisan migrate
+ 2540  php artisan db:seed
+ 2541  php artisan migrate
+ 2542  php artisan db:seed
+ 2543  php artisan migrate
+ 2544  php artisan db:seed
+ 2545  php artisan migrate:rollback
+ 2546  php artisan migrate
+ 2547  php artisan db:seed
+ 2548  php artisan migrate:rollback
+ 2549  php artisan migrate
+ 2550  php artisan db:seed
+ 2551  php artisan make:controller Api/UsersController --api\n
+ 2559  git status
+ 2560  git add . 
+ 2561  git commit -m "add laravel, database, data seeder""\n"
+ 2562  git status 
+ 2563  git push origin main
+ 2564  composer update 
+ 2565  git status
+ 2566  git add .
+ 2567  git commit -m "update composer"
+ 2568  git push origin main
+ 2570  git pull origin main --rebase
+ 2571  composer update 
+ 2572  git status
+ 2573  git  push origin main
+ 2574  php --version 
+ 2575  sudo chmod -R 777 storage bootstrap/cachechmod a+x ./rename.sh
+ 2576  sudo chmod -R 777 storage bootstrap/cache
+ 2577  git status
+ 2578  git add .env.example
+ 2579  ll
+ 2586  git status
+ 2587  cd HealthRestfullWebsite
+ 2588  git status
+ 2589  git pull origin main --rebase
+ 2590  git add . 
+ 2591  git commit -m "update"
+ 2592  git pull origin main --rebase
+ 2593  git status
+ 2594  git push origin main
+ 2595  git pull origin main --rebase
+ 2596  git status
+ 2597  git log --oneline
+ 2598  git rebase -i HEAD~5
+ 2599  git rebase --edit-todo
+ 2600  git status
+ 2601  git add .
+ 2602  git status
+ 2603  git commit -m "add file"
+ 2604  git log --oneline
+ 2605  git rebase --edit-todo
+ 2606  git rebase --continue
+ 2607  git rebase --abort
+ 2608  git log --oneline
+ 2609  git status
+ 2610  git log --oneline
+ 2611  sudo chmod -R 777 storage bootstrap/cache
+ 2612  git status
+ 2613  git pull origin main --rebase
+ 2614  git status
+ 2615  git add .
+ 2616  git commit -m "update gitignore"
+ 2617  git status
+ 2618  git branch
+ 2619  git log --oneline
+ 2620  git status
+ 2621  git rm -r --cached .
+ 2622  git add .
+ 2623  git commit -m "update gitignore"
+ 2624  git status
+ 2625  git push origin main
+ 2626  git status
+ 2627  git log --oneline
+ 2628  git rebase -i HEAD~5
+ 2629  git rebase --abort
+ 2630  git rebase -i HEAD~6
+ 2631  git rebase --abort
+ 2632  git rebase -i HEAD~6
+ 2633  git rebase --abort
+ 2634  git rebase -i HEAD~6
+ 2635  git status
+ 2636  git log --online
+ 2637  git log --oneline
+ 2638  git push origin main
+ 2639  git status
+ 2640  composer update 
+ 2641  git status
+ 2642  php artisan storage:link\n
+ 2643  git status
+ 2644  php artisan storage:link\n
+ 2645  git add .
+ 2646  git commit -m "add images"
+ 2647  git push origin main -f
+ 2648  git status
+ 2649  git flow 
+ 2650  git-flow
+ 2651  brew install git-flow\n\n
+ 2652  git flow
+ 2653  git flow start crud_api
+ 2654  git flow feature start crud_api
+ 2655  git flow init
+ 2656  git flow feature start crud_api
+ 2657  git branch
+ 2658  git status
+ 2659  php artisan migrate:rollback
+ 2660  php artisan migrate
+ 2661  php artisan db:seed
+ 2662  composer update 
+ 2664  git status
+ 2665  rm app/Http/Controllers/Api/UserAPIController.php
+ 2670  git status
+ 2671  git checkout app/Http/
+ 2673  git status
+ 2674  php artisan make:resource UserResource
+ 2675  php artisan make:request CompanyRequest
+ 2676  php artisan make:request Api/UserRequest
+ 2677  php artisan serve
+ 2678  php artisan migrate:rollback
+ 2679  php artisan migrate
+ 2680  php artisan migrate:rollback
+ 2681  php artisan migrate
+ 2682  php artisan serve
+ 2683  php status
+ 2684  git status
+ 2685  git checkout app/Models/User.php
+ 2686  git status
+ 2687  git checkout AuthController.php
+ 2688  git checkout app/Http/Controllers/AuthController.php
+ 2689  php artisan migrate:rollback
+ 2690  php artisan migrate
+ 2691  php artisan db:seed
+ 2692  git status
+ 2693  php artisan route:list
+ 2694  php artisan serve
+ 2695  git status
+ 2696  git add . 
+ 2697  git status
+ 2698  rm  app/Http/Requests/API/UpdateUserAPIRequest.php   app/Http/Requests/API/CreateUserAPIRequest.php 
+ 2699  git status
+ 2700  git add . 
+ 2701  git status
+ 2702  git add . 
+ 2703  git status
+ 2704  git commit -m "users crud api "
+ 2707  php artisan make:resource AchievementResource
+ 2708  php artisan make:request Api/AchhievementRequest
+ 2709  php artisan make:controller Api/AchievementController --api
+ 2710  php artisan route:list
+ 2711  git status
+ 2712  git add . 
+ 2713  git comment -m "achievement crud api"
+ 2714  git branch
+ 2715  git commit -m "achievements crud api"
+ 2716  php artisan make:controller Api/BodyController --api
+ 2717  php artisan make:resource BodyResource
+ 2718  php artisan make:request BodyRequest
+ 2719  php artisan route:list
+ 2720  git status
+ 2721  git add .
+ 2722  git commit -m "bodies crud api"
+ 2723  git status
+ 2724  php artisan migrate:rollback
+ 2725  php artisan migrate
+ 2726  php artisan db:seed
+ 2727  git status
+ 2728  git add -p 
+ 2729  git commit -m "add role admin, user""\n"
+ 2730  php artisan make:controller Api/CategoryController --api\nphp artisan make:resource CategoryResource\nphp artisan make:request Api/CategoryRequest
+ 2731  php artisan route:list
+ 2732  php artisan make:controller Api/DiaryController --api\nphp artisan make:resource DiaryResource\nphp artisan make:request Api/DiaryRequest
+ 2733  php artisan make:controller Api/ExerciseController --api\nphp artisan make:resource ExerciseResource\nphp artisan make:request Api/ExerciseRequest
+ 2734  php artisan route:list
+ 2735  git status
+ 2736  php artisan make:controller Api/PostController --api\nphp artisan make:resource PostResource\nphp artisan make:request Api/PostRequest
+ 2737  php artisan db:seeder 
+ 2738  git artisan db:seed
+ 2739  php artisan db:seed
+ 2740  git status
+ 2741  \nphp artisan make:controller Api/MealController --api\nphp artisan make:resource MealResource\nphp artisan make:request Api/MealRequest
+ 2742  php artisan route:list
+ 2743  php artisan db:seed --class=MealSeeder
+ 2744  php artisan make:controller Api/WeightController --api\nphp artisan make:resource WeightResource\nphp artisan make:request Api/WeightRequest
+ 2745  git status
+ 2746  git add . 
+ 2747  git commit -m "api crud: category post exercise meal weight note"
+ 2748  git status
+ 2749  git push origin main -f
+ 2750  git branch
+ 2771  php artisan route:list
+ 2772* php artisan serve
+ 2778  php artisan route:list
+ 2779  php artisan make:request Api/UserAchivementRequest
+ 2780  php artisan route:list
+ 2781* php artisan serve
+ 2782  php artisan route:list
+ 2783  git status
+ 2784  git add -p
+ 2785  git status
+ 2786  git commit -m "api achievement by day or by range date"
+ 2787  git status
+ 2788  php artisan route:list
+ 2789  git status
+ 2790  git add -p 
+ 2791  git commit -m "api weight by day"
+ 2792  php artisan make:request Api/UserExerciseRequest
+ 2793  php artisan make:request Api/UserCategoryRequest
+ 2794  git status
+ 2795  git add -p 
+ 2797  git status
+ 2799  git add app/Http/Requests/API/
+ 2800  git status
+ 2801  git commit -m "api user record: weight, note, body, meal, exercise, post, category by day, date range, and add search features"
+ 2802  git status
+ 2803  git branch
+ 2804  git status
+ 2805  git push origin feature/crud_api
+ 2808* mkdir docs
+ 2809* git add docs/
+ 2810* git commit -m "add document"
+ 2811* git push origin feature/crud_api
+ 2812  git-flow feature finish crud_api
+ 2813  git push origin develop
+ 2814  git-flow feature start readme_doc
+ 2815  git-flow feature finish readme_doc
+ 2816  git status
+ 2817  git add .
+ 2818* php artisan route:list
+ 2819* php artisan route:list > route.txt
+ 2820* git add .
+ 2821  git commit -m "add reade me document"
+ 2822  git-flow feature finish readme_doc
+ 2823  git-flow release start 
+ 2824  git-flow release start 0.1.0 
+ 2825  git flow release publish 0.1.0
