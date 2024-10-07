@@ -1,1 +1,3 @@
-# Sample Code by Rails, PHP, Python, Java, GoLang, C/C++, C#, Laravel, Symfony, CodeIgniter, Wordpress, Drupal, Joomla, Yii, Spring, Struts, and other libraries
+# Sample Code by Ruby, PHP, Python, Java, GoLang, C/C++, C# 
+Sample code by programming languages: Ruby, PHP, Python, Java, GoLang, C/C++, C#
+Frameworks: Laravel, Rails, Symfony, CodeIgniter, WordPress, Drupal, Joomla, Yii, Django, Flask, Spring, Struts, and other libraries
