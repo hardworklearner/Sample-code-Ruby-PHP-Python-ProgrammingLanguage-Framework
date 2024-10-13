@@ -45,13 +45,13 @@ pip install -r requirements.txt
 
 3. Running the Simulationa
 
-1. Launch the program:
+- Launch the program:
 
 ```bash
 python cli.py
 ```
 
-2. Follow the command line prompts to set up the simulation field, add cars, and run the simulation.
+- Follow the command line prompts to set up the simulation field, add cars, and run the simulation.
 
 ## The full description below:
 
@@ -516,7 +516,3 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-Inspiration from Tesla’s autonomous driving technology.
