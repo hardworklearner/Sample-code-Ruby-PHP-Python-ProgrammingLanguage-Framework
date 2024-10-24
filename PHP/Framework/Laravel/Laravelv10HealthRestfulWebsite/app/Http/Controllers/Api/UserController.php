@@ -15,11 +15,17 @@ use App\Http\Requests\Api\UserExerciseRequest;
 
 class UserController extends ApiController
 {
+    /**
+     * Retrieve a collection of all users.
+     */
     public function index()
     {
         return UserResource::collection(User::all());
     }
 
+    /**
+     * Create a new user.
+     */
     public function store(UserRequest $request)
     {
         $user = User::create($request->validated());
@@ -31,6 +37,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Display a specific user by ID.
+     */
     public function show(User $user)
     {
         try {
@@ -40,6 +49,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Update an existing user.
+     */
     public function update(UserUpdateRequest $request, User $user)
     {
         try {
@@ -50,6 +62,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Delete a user by ID.
+     */
     public function destroy(User $user)
     {
         try {
@@ -60,6 +75,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Add an achievement to the logged-in user.
+     */
     public function achievement(Request $request, $achievement_id)
     {
         try {
@@ -112,6 +130,10 @@ class UserController extends ApiController
         return response()->json(["message" => "Achievements list", 'data' => $achievements], 200);
     }
 
+
+    /**
+     * Retrieve weight records by date or range.
+     */
     public function weightsList(Request $request)
     {
         try {
@@ -139,6 +161,9 @@ class UserController extends ApiController
         return response()->json(["message" => "Weights list", 'data' => $weights], 200);
     }
 
+    /**
+     * Retrieve body data by date or range.
+     */
     public function BodiesList(Request $request)
     {
         try {
@@ -166,33 +191,63 @@ class UserController extends ApiController
         return response()->json(["message" => "Bodies list", 'data' => $bodies], 200);
     }
 
+    /**
+     * Summary of exercisesList
+     * @param \Illuminate\Http\Request $request
+     * @return mixed
+     */
     public function exercisesList(Request $request)
     {
         try {
+            // Get the logged-in user.
             $user = $this->userLoggedIn();
+
+            // Fetch the user's exercises as a query builder instance.
             $exercises = $user->exercises();
+
+            // If a specific date is provided, filter exercises by that date.
             if ($request->has("date")) {
                 $date = date('Y-m-d', strtotime($request->get("date")));
                 $exercises = $exercises->whereDate('exercise_time', $date)->get();
 
-                return response()->json(["message" => "Exercises list", "data" => $exercises], 200);
+                // Return the filtered exercises.
+                return response()->json([
+                    "message" => "Exercises list",
+                    "data" => $exercises
+                ], 200);
             }
 
+            // If a start date is provided, filter exercises from that date onwards.
             if ($request->has("start_date")) {
                 $start_date = date('Y-m-d', strtotime($request->get("start_date")));
                 $exercises->whereDate('exercise_time', '>=', $start_date);
             }
+
+            // If an end date is provided, filter exercises up to that date.
             if ($request->has("end_date")) {
                 $end_date = date('Y-m-d', strtotime($request->get("end_date")));
                 $exercises->whereDate('exercise_time', '<=', $end_date);
             }
+
+            // Fetch the filtered exercises.
             $exercises = $exercises->get();
         } catch (Exception $ex) {
-            return response()->json(["message" => "Exercises list failed: " . $ex->getMessage()], 404);
+            // Handle any exceptions and return an error response.
+            return response()->json([
+                "message" => "Exercises list failed: " . $ex->getMessage()
+            ], 404);
         }
-        return response()->json(["message" => "Exercises list", 'data' => $exercises], 200);
+
+        // Return the exercises list in the response.
+        return response()->json([
+            "message" => "Exercises list",
+            'data' => $exercises
+        ], 200);
     }
 
+    /**
+     * Add a new exercise for the user.
+     */
     public function exercises(UserExerciseRequest $request)
     {
         try {
@@ -216,6 +271,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Attach a category to the user.
+     */
     public function categoryAdd(UserCategoryRequest $request)
     {
         try {
@@ -228,24 +286,45 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * Summary of categoryRemove
+     * @param \Illuminate\Http\Request $request
+     * @param mixed $category_id
+     * @return mixed
+     */
     public function categoryRemove(Request $request, $category_id)
     {
         try {
             $user = $this->userLoggedIn();
-            $hasCategory = $user->categories()->where('category_id', $category_id)->exists();
-            if (!$hasCategory) {
-                return response()->json(["message" => "Category does not exists"], 400);
+
+            // Use `find` to avoid multiple queries and handle cases where category doesn't exist.
+            $category = $user->categories()->find($category_id);
+
+            if (!$category) {
+                return response()->json([
+                    "message" => "Category does not exist"
+                ], 404);
             }
+
+            // Detach the category from the user.
             $user->categories()->detach($category_id);
-            return response()->json(["message" => "Category removed", "data" => new UserResource($user)], 200);
+
+            return response()->json([
+                "message" => "Category removed successfully",
+                "data" => new UserResource($user)
+            ], 200);
         } catch (Exception $ex) {
-            return response()->json(
-                ["message" => "Category remove failed: " . $ex->getMessage()],
-                500
-            );
+            // Use a more generic error message to avoid exposing sensitive details.
+            return response()->json([
+                "message" => "Failed to remove category"
+            ], 500);
         }
     }
 
+
+    /**
+     * List all categories assigned to the user.
+     */
     public function categoriesList(Request $request)
     {
         try {
@@ -259,6 +338,9 @@ class UserController extends ApiController
         }
     }
 
+    /**
+     * List all posts of the user by date or range.
+     */
     public function postsList(Request $request)
     {
         try {
@@ -289,6 +371,11 @@ class UserController extends ApiController
         return response()->json(["message" => "Posts list", 'data' => $posts], 200);
     }
 
+    /**
+     * Summary of DiariesList
+     * @param \Illuminate\Http\Request $request
+     * @return mixed
+     */
     public function DiariesList(Request $request)
     {
         try {
@@ -319,6 +406,11 @@ class UserController extends ApiController
         return response()->json(["message" => "Diaries list", 'data' => $diaries], 200);
     }
 
+    /**
+     * Summary of mealsList
+     * @param \Illuminate\Http\Request $request
+     * @return mixed
+     */
     public function mealsList(Request $request)
     {
         try {
